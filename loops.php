@@ -12,6 +12,15 @@ for ($i=1; $i <= 10 ; $i++) {
 echo "<br>";
 echo "<br>";
 
+//Solução Hendy
+
+for ($i=1; $i <= 10; $i++) { 
+    echo "2 x $i = " . 2*$i . "<br>";
+}
+
+echo "<br>";
+echo "<br>";
+
 // 2. Um loop while que conta de 100 a 85 (observe que, nesse caso, está
 // diminuindo).
 
@@ -35,6 +44,21 @@ echo "<br>";
 // cara(o número 1). Quando terminar, você deve imprimir quantas jogadas de
 // moedas foram necessárias para obter 5 vezes a cara.
 
+$cara = 0;
+$jogadas = 0;
+
+while ($cara < 5) {
+    $moeda = mt_rand(0,1);
+    if($moeda == 1){
+        $cara++;
+    }
+    $jogadas++;
+}
+echo "Joguei a moeda $jogadas vezes";
+
+
+echo "<br>";
+echo "<br>";
 
 // 5. Defina um array com 5 strings que são nomes. Passe por este array para
 // imprimir cada um dos nomes na tela.
@@ -77,11 +101,36 @@ echo "<br>";
 // para imprimir todos os números. A execução deve ser concluída se qualquer
 // um dos números encontrados for um 5 (deve imprimir "O 5 foi encontrado!")
 
+
 $resultado = [];
     
-for ($i=0; $i <= 10; $i++) { 
-echo $resultado[]=$i;
+for ($i=0; $i <= 10; $i++) {
+$numRandom = mt_rand(0,10); 
+$resultado[$i]=$numRandom;
+if ($numRandom == 5) {
+    echo "O 5 foi encontrado!";
+    break;
+    }
 }
+
+//Solução Hendy
+
+// for ($i=0; $i < 10; $i++) { 
+//     $resultado[$i] = mt_rand(0,10);
+// }
+
+// foreach ($resultado as $key => $value) {
+//     if ($value == 5) {
+//         echo "Encontrei o 5 na posição $key";
+//         break;
+//     }
+// }
+
+echo '<pre>';
+print_r ($resultado);
+echo '</pre>';
+
+
 
 // for($i=0;$i < 10;$i++){
 //     $array[$i] = rand(0,10);    

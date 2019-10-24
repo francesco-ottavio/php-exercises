@@ -92,3 +92,5 @@ function maior($num1,$num2,$num3){
 // }
 
 // tabela(30);
+
+?>

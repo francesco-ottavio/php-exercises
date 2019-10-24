@@ -8,12 +8,23 @@
 include ('superficie.php');
 include ('funcoes.php');
 
+//Resolvido.. era só criar a variável global "valor", e solvar os calculos nela... depois trabalhar com ela
+// na funcao tuduJunto.
+
+
+$valor = "";
 
 function tudoJunto($raio1,$raio2,$raio3){
-    $resultado1 = circulo($raio1);
-    $resultado2 = circulo($raio2);
-    $resultado3 = circulo($raio3);
+    global $valor;
+    circulo($raio1);
+    $resultado1 = $valor;
+    circulo($raio2);
+    $resultado2 = $valor;
+    circulo($raio3);
+    $resultado3 = $valor;
     maior ($resultado1,$resultado2,$resultado3);
 };
 
-tudoJunto(2,3,4);
+tudoJunto(11,0,2);
+
+?>

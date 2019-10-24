@@ -28,7 +28,10 @@
 // quadrado (30);
 
 function circulo($raio){
-    pi()*$raio*$raio . "<br>";
-}
+    global $valor;
+   $valor = pi()*$raio*$raio;
+}   
 
 // circulo(5);
+
+?>
